@@ -2,7 +2,7 @@ package de.neuefische.jan.j1exercises2409;
 
 public class Alarm {
 
-    public static String getPeopleCapacityStatus(int numberOfPeople, String threatLevel) {
+    public static String getPeopleCapacityStatus(int numberOfPeople, AlarmLevel threatLevel) {
         int limit = getMaximumNumberOfPeople(threatLevel);
         if (numberOfPeople <= limit) {
             return "Maximum number of people not exceeded";
@@ -10,13 +10,13 @@ public class Alarm {
         return "Too many people";
     }
 
-    public static int getMaximumNumberOfPeople(String threatLevel){
+    public static int getMaximumNumberOfPeople(AlarmLevel threatLevel){
         switch(threatLevel) {
-            case "red":
+            case RED:
                 return 0;
-            case "yellow":
+            case YELLOW:
                 return 30;
-            case "green":
+            case GREEN:
                 return 60;
             default:
                 return 0;

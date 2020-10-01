@@ -17,7 +17,6 @@ class AlarmTest {
             "YELLOW, 31, Too many people",
             "GREEN, 60, Maximum number of people not exceeded",
             "GREEN, 61, Too many people",
-
     })
     public void checkAllowedNumberOfPersons(AlarmLevel threatLevel, int numberOfPeople, String expected) {
         // When

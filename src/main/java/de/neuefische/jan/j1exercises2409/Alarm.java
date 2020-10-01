@@ -11,15 +11,7 @@ public class Alarm {
     }
 
     public static int getMaximumNumberOfPeople(AlarmLevel threatLevel){
-        switch(threatLevel) {
-            case RED:
-                return 0;
-            case YELLOW:
-                return 30;
-            case GREEN:
-                return 60;
-            default:
-                return 0;
-        }
+        return threatLevel.maxCapacity;
+
     }
 }
